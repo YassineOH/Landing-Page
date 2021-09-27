@@ -24,6 +24,10 @@ main {
   width: 100%;
 
   header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     h1 {
       font-weight: bolder;
     }
@@ -37,13 +41,16 @@ main {
 
       &:hover {
         font-weight: bold;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-        background-color: rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid $dark-color;
       }
     }
   }
 
   .product {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
     height: 80vh;
 
     h2 {
@@ -82,7 +89,6 @@ main {
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100%;
-      border-radius: 50%;
 
       &:nth-child(1) {
         background-image: url(/images/card1.svg);

@@ -386,6 +386,13 @@ main {
   width: 100%;
 }
 
+main header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
 main header h1 {
   font-weight: bolder;
 }
@@ -402,11 +409,14 @@ main header nav ul li {
 
 main header nav ul li:hover {
   font-weight: bold;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #181d26;
 }
 
 main .product {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   height: 80vh;
 }
 
@@ -446,7 +456,6 @@ main .product .grid {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  border-radius: 50%;
 }
 
 .features .container div:nth-child(1) {
