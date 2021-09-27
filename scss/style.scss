@@ -1,0 +1,143 @@
+// import
+
+@import "config";
+@import "utilities";
+@import "buttons";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+// Header and produt
+
+main {
+  background-image: url(/images/bg1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+
+  header {
+    h1 {
+      font-weight: bolder;
+    }
+
+    .flex {
+      justify-content: space-between;
+    }
+
+    nav ul li {
+      padding: $sm $lg;
+
+      &:hover {
+        font-weight: bold;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .product {
+    height: 80vh;
+
+    h2 {
+      font-weight: bolder;
+      font-size: $hg;
+      span {
+        color: $primary-color;
+      }
+    }
+
+    .grid {
+      grid-template-columns: 2fr 1.5fr;
+    }
+  }
+}
+
+//features
+
+.features {
+  background-image: url(/images/bg3.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    font-size: $hg;
+    font-weight: 700;
+  }
+
+  .container {
+    color: $dark-color;
+    max-width: 1200px;
+
+    div {
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border-radius: 50%;
+
+      &:nth-child(1) {
+        background-image: url(/images/card1.svg);
+      }
+      &:nth-child(2) {
+        background-image: url(/images/card2.svg);
+      }
+
+      &:nth-child(3) {
+        background-image: url(/images/card3.svg);
+      }
+    }
+  }
+}
+
+// services
+
+.services {
+  background-image: url(/images/bg2.svg);
+  background-size: cover, 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h2 {
+    font-size: $hg;
+    font-weight: 700;
+  }
+
+  .card {
+    background-color: rbga(#e0fbfc, 0.1);
+    i {
+      color: $primary-color;
+    }
+  }
+}
+
+// footer
+
+footer {
+  .grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  nav,
+  .social {
+    .flex {
+      align-items: flex-start;
+
+      li {
+        margin: $sm 0;
+        opacity: 0.2;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
