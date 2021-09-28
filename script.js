@@ -32,7 +32,6 @@ function runAnimation() {
 
             case 3:
                 if (bottomScreen > secTop) {
-                    console.log(sect.getElementsByTagName("form"))
                     sect.querySelector("form").style.animation = "appear 1s ease"
                 } else {
                     sect.querySelector("form").style.animation = ""
