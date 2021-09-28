@@ -246,7 +246,7 @@ footer {
 
 // meadia query
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   * {
     text-align: center;
   }
@@ -283,14 +283,16 @@ footer {
   .features {
     .container {
       div {
-        background-size: 400%;
-        padding: 15px;
-        margin: $md;
+        padding: 20px;
+        margin: 20px 0;
+        background-image: url("");
+        background-color: $primary-color;
+        border-radius: 51% 49% 70% 30% / 30% 74% 26% 70%;
       }
     }
 
     .mob {
-      flex-direction: row;
+      flex-direction: column;
     }
   }
 
