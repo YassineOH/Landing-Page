@@ -65,24 +65,27 @@ p {
 
 .form-control {
   width: 100%;
+  background-color: transparent;
+  border: 0.5px solid $dark-color;
+  border-radius: 5px;
+  padding: $sm $md;
+  margin: $lg 0;
+  font-size: 20px;
 
-  input {
-    font-size: $sm;
-    width: 100%;
-    border: none;
-    padding: 10px 5px;
-    margin: 20px 0;
-    background-color: transparent;
-    border-bottom: 5px solid $dark-color;
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px $primary-color;
+  }
+  &::placeholder {
     color: $dark-color;
+  }
+}
 
-    &:focus{
-      outline: none;
-    }
-
-    &::placeholder {
-      color: $dark-color;
-    }
+.form-control-light {
+  border-color: $light-color;
+  color: $light-color;
+  &::placeholder {
+    color: $light-color;
   }
 }
 

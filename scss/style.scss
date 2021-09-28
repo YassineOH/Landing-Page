@@ -3,6 +3,7 @@
 @import "config";
 @import "utilities";
 @import "buttons";
+@import "mobile";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
@@ -16,7 +17,7 @@
 // Header and produt
 
 main {
-  background-image: url(/images/bg1.svg);
+  background-image: url("../images/bg1.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -28,6 +29,8 @@ main {
     left: 0;
     right: 0;
     top: 0;
+    transition: background-color 1s ease-in, color 1s ease-in;
+
     h1 {
       font-weight: bolder;
     }
@@ -47,11 +50,19 @@ main {
   }
 
   .product {
+    margin-top: 5rem;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     height: 80vh;
+
+    div {
+      overflow: visible;
+      div {
+        animation: fromLeft 2s ease-in;
+      }
+    }
 
     h2 {
       font-weight: bolder;
@@ -59,6 +70,10 @@ main {
       span {
         color: $primary-color;
       }
+    }
+
+    img {
+      animation: fromRight 2s ease-in;
     }
 
     .grid {
@@ -70,7 +85,7 @@ main {
 //features
 
 .features {
-  background-image: url(/images/bg3.svg);
+  background-image: url("../images/bg3.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,14 +106,14 @@ main {
       background-size: 100%;
 
       &:nth-child(1) {
-        background-image: url(/images/card1.svg);
+        background-image: url("../images/card1.svg");
       }
       &:nth-child(2) {
-        background-image: url(/images/card2.svg);
+        background-image: url("../images/card2.svg");
       }
 
       &:nth-child(3) {
-        background-image: url(/images/card3.svg);
+        background-image: url("../images/card3.svg");
       }
     }
   }
@@ -107,7 +122,7 @@ main {
 // services
 
 .services {
-  background-image: url(/images/bg2.svg);
+  background-image: url("../images/bg2.svg");
   background-size: cover, 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,6 +136,34 @@ main {
     background-color: rbga(#e0fbfc, 0.1);
     i {
       color: $primary-color;
+    }
+  }
+}
+
+// contact
+
+.contact {
+  background-image: url("../images/bg4.svg");
+  background-size: cover, 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  h2 {
+    font-size: $hg;
+    color: $light-color;
+    font-weight: 700;
+  }
+
+  form {
+    font-size: $lg;
+    margin: auto;
+    max-width: 400px;
+
+    input {
+      margin: 15px 0;
+    }
+
+    textarea {
+      font-size: $sm;
     }
   }
 }
@@ -144,6 +187,139 @@ footer {
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+// Animation
+@keyframes fromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// meadia query
+
+@media (max-width: 768px) {
+  * {
+    text-align: center;
+  }
+
+  .product .grid,
+  footer .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  main {
+    height: 100vh;
+
+    header {
+      overflow: hidden;
+      width: 100%;
+
+      nav ul li {
+        padding: 0;
+        margin: 5px 15px;
+      }
+    }
+
+    .product {
+      height: 80vh;
+
+      .grid {
+        height: 100%;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .features {
+    .container {
+      div {
+        background-size: 400%;
+        padding: 15px;
+        margin: $md;
+      }
+    }
+
+    .mob {
+      flex-direction: row;
+    }
+  }
+
+  footer {
+    nav .flex,
+    .social .flex {
+      align-items: center;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  * h2 {
+    font-size: $lg;
+  }
+
+  .features {
+    .container div {
+      background-size: 200%;
+      margin: $lg 0;
+      padding: 10px;
+    }
+
+    .mob {
+      flex-direction: column;
     }
   }
 }

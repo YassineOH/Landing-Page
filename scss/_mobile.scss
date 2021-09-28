@@ -1,16 +1,24 @@
 // Tabet and under
 
 @media (max-width: 768px) {
-    .mob {
-        flex-direction: column;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr
-    }
+  .mob {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    overflow-x: hidden;
+  }
 
+  .lead {
+    font-size: 15px;
+  }
+  img {
+    display: none;
+  }
 }
 //mobile
 
 @media (max-width: 500px) {
-
-
 }
