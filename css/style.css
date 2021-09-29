@@ -420,6 +420,11 @@ p {
   scroll-behavior: smooth;
 }
 
+body {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 .loader {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #001220), color-stop(50%, #e0fbfc));
   background: linear-gradient(to bottom, #001220 50%, #e0fbfc 50%);
@@ -523,6 +528,8 @@ main .product div {
 main .product div div {
   -webkit-animation: fromLeft 2s ease-in;
           animation: fromLeft 2s ease-in;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
 }
 
 main .product h2 {
@@ -537,6 +544,8 @@ main .product h2 span {
 main .product img {
   -webkit-animation: fromRight 2s ease-in;
           animation: fromRight 2s ease-in;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
 }
 
 main .product .grid {

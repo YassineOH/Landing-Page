@@ -17,6 +17,8 @@
 // loading page
 
 body {
+  height: 100vh;
+  overflow-y: hidden;
 }
 .loader {
   background: linear-gradient(to bottom, #001220 50%, $light-color 50%);
@@ -104,6 +106,7 @@ main {
       overflow: visible;
       div {
         animation: fromLeft 2s ease-in;
+        animation-delay: 4.5s;
       }
     }
 
@@ -117,6 +120,7 @@ main {
 
     img {
       animation: fromRight 2s ease-in;
+      animation-delay: 4.5s;
     }
 
     .grid {
